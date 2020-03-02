@@ -12,10 +12,10 @@
                     .tooltip .content{ padding:5px; font-size:12px; color:#07273E;}
                 </style>
             </head>
-            <body  onmousedown="return false;">
+            <body  onmousedown="return false;" style="background-color:black;">
                 <div id="countriesHolder">                    
                     
-                    <div id="worldmap" width="1000" height="400"></div>
+                    <div id="worldmap" width="2000" height="800"></div>
                 </div>
                 <div class="tooltip">
                     <div class="title">Null</div>
@@ -34,14 +34,13 @@
                     };
                     html5WorldMap.WorldMap({
                         id: "worldmap",
-                        bgcolor: "#c1e6f7",
-                        fgcolor: "#ededed",
+                        bgcolor: "#000000",
+                        fgcolor: "#333333",
                         bordercolor: "#d2d3d4",
                         borderwidth: 1,
                         padding: 20,
                         zoom: zoom,
                         zoomed: zoomed,
-                        /*<?php if ($_GET['zoomTo'] == '') { echo 'zoom:"",'; } else { echo 'zoom:"' . $_GET['zoomTo'] . '",zoomed:true,'; } ?>*/
                         detail: { "us": "#0c5c7d"}
                     });
                 </script>

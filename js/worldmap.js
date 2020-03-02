@@ -43,8 +43,8 @@ var html5WorldMap = {
         // create variables
         var oSettings = (oSettings || {});
         oSettings.detail = (oSettings.detail || {});
-        var sBGColor = (oSettings.bgcolor || "#ffffff");
-        var sFGColor = (oSettings.fgcolor || "#dddddd");
+        var sBGColor = (oSettings.bgcolor || "#000000");
+        var sFGColor = (oSettings.fgcolor || "#333333");
         var sBorderColor = (oSettings.bordercolor || "#aaaaaa");
         var iPadding = ((oSettings.padding || 10) * 2);
         var sZoom = (oSettings.zoom || "ca,cl,us,ru");
@@ -53,8 +53,8 @@ var html5WorldMap = {
         var isZoomed = oSettings.zoomed;
         this.isZoomed= isZoomed;
         
-        var iCanvasWidth = $("div#worldmap").attr('width');        
-        var iCanvasHeight = $("div#worldmap").attr('height');        
+        var iCanvasWidth = $("div#worldmap").attr('width');
+        var iCanvasHeight = $("div#worldmap").attr('height');
         var mapStage = new Kinetic.Stage('worldmap', iCanvasWidth, iCanvasHeight);
         
 
@@ -131,7 +131,7 @@ var html5WorldMap = {
 
             country.addEventListener('mouseover', function(){                                                
                 var r = mapStage.getRegion(sCountry);
-                r.fillStyle = '#e3e0cb';
+                r.fillStyle = sBGColor;
                 r.fill();                                                
             });
             
@@ -143,7 +143,7 @@ var html5WorldMap = {
 
             country.addEventListener('mouseout', function(){
                 var r = mapStage.getRegion(sCountry);
-                r.fillStyle = '#ededed';
+                r.fillStyle = sFGColor;
                 r.fill();
                 $("div.tooltip").hide();
             });
