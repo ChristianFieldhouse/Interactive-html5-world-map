@@ -204,6 +204,7 @@ var html5WorldMap = {
             'left': mouseCoords.x + 'px'
             });
         $("div.tooltip div.title").html(getCountryCode(country));
+        $("div.tooltip div.content").html(getCountryCode(country) + " is pretty cool");
     },
 
     removeAll: function(){
