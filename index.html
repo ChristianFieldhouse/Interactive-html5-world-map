@@ -21,6 +21,7 @@
                     <div class="title">Null</div>
                     <div class="content">Null content</div>
                 </div>
+				<script src="js/map_colours.js"></script>
                 <script type="text/javascript">
                     var search = document.location.search;
                     var zoom = '';
@@ -40,9 +41,9 @@
                         borderwidth: 1,
                         padding: 20,
                         zoom: zoom,
-                        zoomed: zoomed//,
-                        //detail: { "us": "#0c5c7d"}
-                    });
+                        zoomed: zoomed,
+                        detail: latest_map
+						});
                 </script>
             </body>
         </html>

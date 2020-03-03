@@ -126,7 +126,7 @@ var html5WorldMap = {
             country.id = sCountry;
 
             country.addEventListener('mousedown', function(){
-                document.location.href = '?a=map&zoomTo=' + sCountry;
+                window.location.href = 'www.wikipedia.com'; // todo: link to a country's wiki page?
             });
 
             country.addEventListener('mouseover', function(){                                                
